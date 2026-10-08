@@ -163,3 +163,22 @@ dialog .x:hover{background:#fff;color:var(--ink)}
 @media (max-width:620px){
   .gal.pair{grid-template-columns:1fr}
 }
+
+/* cornici uniformi nelle gallerie */
+.gal.square .frame{aspect-ratio:1/1}
+
+/* animazioni leggere: ingrandimento lento della foto e ombra morbida */
+.gal .frame,.tile .frame{transition:box-shadow .35s ease}
+.gal .frame img,.tile .frame img{transition:transform .6s cubic-bezier(.2,.6,.2,1)}
+@media (hover:hover){
+  .gal .frame:hover,.tile:hover .frame{box-shadow:0 14px 26px -16px rgba(6,42,85,.45)}
+  .gal .frame:hover img,.tile:hover .frame img{transform:scale(1.045)}
+  .dark .gal .frame:hover{box-shadow:0 14px 26px -16px rgba(0,0,0,.7)}
+}
+/* sul telefono: piccola risposta mentre il dito è appoggiato */
+.gal .frame:active img,.tile:active .frame img{transform:scale(1.03);transition-duration:.2s}
+.btn:active{transform:translateY(1px)}
+@media (prefers-reduced-motion:reduce){
+  .gal .frame,.tile .frame,.gal .frame img,.tile .frame img{transition:none}
+  .gal .frame:hover img,.tile:hover .frame img,.gal .frame:active img,.tile:active .frame img{transform:none}
+}
