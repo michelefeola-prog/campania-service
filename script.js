@@ -1,3 +1,4 @@
+window.__ok = 1;
 /* 1. Foto mancanti: nasconde la cornice, così non restano riquadri vuoti */
 document.querySelectorAll('.frame img').forEach(function (img) {
   function hide() { img.closest('.frame').hidden = true; }
@@ -79,4 +80,26 @@ if (lb) {
 
   var row = document.querySelector('.hours tr[data-day="' + d + '"]');
   if (row) row.classList.add('today');
+})();
+
+/* 4. Comparsa allo scorrimento: foto, testi e linee a punto cucito */
+(function () {
+  var items = document.querySelectorAll('.rv, .fx, .rs');
+  if (!items.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    var n = 0;
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.style.setProperty('--d', (n * 0.09) + 's');
+      n++;
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
+  items.forEach(function (el) { io.observe(el); });
 })();
