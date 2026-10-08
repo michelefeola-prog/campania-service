@@ -1,0 +1,165 @@
+:root{
+  --ink:#062A55; --paper:#F6F7F9; --mist:#E3E9F1; --denim:#3E5C86; --thread:#CF5936; --thread-strong:#B84826;
+  --line:rgba(6,42,85,.18);
+  --display:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin:0}
+p{margin:0 0 1rem}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--thread);outline-offset:3px}
+.skip{position:absolute;left:1rem;top:-4rem;background:var(--ink);color:#fff;padding:.6rem 1rem;z-index:20}
+.skip:focus{top:1rem}
+
+/* punto cucito: motivo ricorrente */
+.stitch{height:3px;background:repeating-linear-gradient(90deg,var(--thread) 0 14px,transparent 14px 24px)}
+.draw{clip-path:inset(0 100% 0 0);animation:draw 1.2s .25s ease-out forwards}
+@keyframes draw{to{clip-path:inset(0 0 0 0)}}
+
+/* header e menu */
+header{position:sticky;top:0;z-index:10;background:rgba(246,247,249,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
+.brand{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--display);font-weight:800;font-size:1.3rem;letter-spacing:-.01em;text-decoration:none}
+.brand-mark{height:44px;width:auto}
+nav{display:flex;gap:1.6rem;font-weight:500}
+nav a{text-decoration:none;padding:.4rem 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current="page"]{border-color:var(--thread)}
+
+/* bottoni */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.4rem;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--ink);background:transparent;color:inherit;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.primary{background:var(--thread-strong);border-color:var(--thread-strong);color:#fff}
+.btn.primary:hover{background:#8F3319;border-color:#8F3319}
+.dark .btn{border-color:#fff}
+.dark .btn:hover{background:#fff;color:var(--ink)}
+.dark .btn.primary{background:var(--thread-strong);border-color:var(--thread-strong);color:#fff}
+.dark .btn.primary:hover{background:#fff;border-color:#fff;color:var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* cornici foto */
+.frame{position:relative;display:block;width:100%;aspect-ratio:4/3;overflow:hidden;background:var(--mist);border-radius:4px}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+button.frame{border:0;padding:0;cursor:zoom-in;font:inherit}
+.dark .frame{background:#123A66}
+
+/* titolo di pagina */
+.page-title{padding:3.2rem 0 2rem}
+.page-title h1{font-size:clamp(2.3rem,5.2vw,3.8rem)}
+.page-title .stitch{width:min(260px,60%);margin:1.4rem 0}
+.page-title p{max-width:38rem;font-size:1.15rem}
+
+/* gallerie */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.gal.two{grid-template-columns:repeat(2,1fr)}
+.gallery-sec{padding:0 0 4.5rem}
+.dark{background:var(--ink);color:#fff}
+.dark .page-title{padding-top:3.2rem}
+.dark .gallery-sec{padding-bottom:4.5rem}
+
+/* fascia con invito all'azione */
+.band{background:var(--mist);padding:3rem 0}
+.band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem 3rem}
+.band p{max-width:36rem;margin:0;font-size:1.15rem}
+
+/* home */
+.hero{padding:3.2rem 0 4.5rem}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.5rem)}
+.hero .stitch{width:min(260px,60%);margin:1.5rem 0}
+.hero p.lead{font-size:1.2rem;max-width:34rem}
+.hero .frame{outline:2px dashed var(--thread);outline-offset:10px;aspect-ratio:3/4;max-width:440px;justify-self:end}
+.status{display:inline-flex;align-items:center;gap:.6rem;padding:.4rem .95rem;border-radius:999px;background:var(--mist);font-weight:600;font-size:.95rem;margin-bottom:1.6rem}
+.status::before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:var(--denim)}
+.status[data-state="open"]::before{background:#1E7F4F}
+.status[data-state="closed"]::before{background:var(--thread)}
+.home-sec{padding:4.5rem 0}
+.home-sec h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:2rem}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:2.2rem 1.5rem}
+.tile{display:block;text-decoration:none}
+.tile h3{font-size:1.6rem;margin:1rem 0 .4rem}
+.tile p{margin:0;max-width:30rem}
+.tile:hover h3{text-decoration:underline;text-decoration-color:var(--thread);text-decoration-thickness:3px;text-underline-offset:5px}
+
+/* testo semplice (riparazioni) */
+.text-sec{padding:0 0 4.5rem}
+.facts{max-width:38rem;margin:0 0 2rem;padding:0;list-style:none;border-top:1px dashed var(--line)}
+.facts li{padding:.8rem 0;border-bottom:1px dashed var(--line)}
+
+/* contatti */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;padding:3.5rem 0 4.5rem}
+.contact h2{font-size:clamp(1.9rem,3.6vw,2.5rem);margin-bottom:1.2rem}
+address{font-style:normal;margin-bottom:1.2rem}
+.hours{border-collapse:collapse;width:100%;max-width:26rem;margin-bottom:1.6rem}
+.hours th,.hours td{text-align:left;padding:.55rem 0;border-bottom:1px dashed var(--line);font-weight:400;vertical-align:top}
+.hours th{width:7.5rem}
+.hours tr.today th,.hours tr.today td{font-weight:600}
+.map{width:100%;height:100%;min-height:340px;border:0;border-radius:4px;background:var(--mist)}
+
+footer{background:var(--ink);color:#fff;padding:2rem 0;font-size:.95rem}
+footer p{margin:0 0 .3rem}
+footer a{text-underline-offset:3px}
+
+/* foto ingrandita */
+dialog{border:0;padding:0;background:transparent;max-width:min(96vw,1100px);overflow:visible}
+dialog::backdrop{background:rgba(10,18,30,.9)}
+dialog img{max-height:84vh;width:auto;margin:0 auto;border-radius:4px}
+dialog .x{display:block;margin:0 0 .6rem auto;min-height:44px;padding:0 1.1rem;border:2px solid #fff;border-radius:6px;background:transparent;color:#fff;font:600 1rem var(--body);cursor:pointer}
+dialog .x:hover{background:#fff;color:var(--ink)}
+
+@media (max-width:900px){
+  .hero .frame{justify-self:center;width:min(100%,440px)}
+  .bar{flex-wrap:wrap;gap:.2rem 1rem;padding:.6rem 0 0}
+  .brand{order:1;font-size:1.15rem;gap:.55rem}
+  .brand-mark{height:38px}
+  .bar > .btn{order:2;margin-left:auto;min-height:42px;padding:0 1.1rem}
+  nav{order:3;width:100%;gap:1.3rem;overflow-x:auto;white-space:nowrap;padding-bottom:.2rem}
+  .hero .wrap,.contact{grid-template-columns:1fr}
+  .hero .wrap{gap:2.5rem}
+  .hero{padding-top:2rem}
+  .home-sec{padding:3.2rem 0}
+  .page-title{padding-top:2.2rem}
+  .contact{padding:2.5rem 0 3.2rem}
+}
+@media (max-width:620px){
+  .tiles{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .gal.two{grid-template-columns:1fr}
+  .btns .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .draw{animation:none;clip-path:none}
+}
+
+/* gallerie con foto di forme diverse: si vedono intere, a colonne */
+.gal.natural{display:block;columns:3 260px;column-gap:1rem}
+.gal.natural .frame{aspect-ratio:auto;margin:0 0 1rem;break-inside:avoid}
+.gal.natural .frame img{position:static;height:auto}
+.gal.portrait .frame{aspect-ratio:3/4}
+@media (max-width:620px){
+  .gal.natural{columns:2;column-gap:.7rem}
+  .gal.natural .frame{margin-bottom:.7rem}
+  .gal.two.portrait{grid-template-columns:repeat(2,1fr);gap:.7rem}
+}
+
+/* telefoni stretti: nome e pulsante restano sulla stessa riga */
+@media (max-width:430px){
+  .brand{font-size:1.02rem;gap:.5rem}
+  .brand-mark{height:34px}
+  .bar > .btn{padding:0 .9rem}
+}
+
+/* due o poche foto grandi, mostrate intere affiancate */
+.gal.pair{grid-template-columns:repeat(2,1fr);align-items:start}
+.gal.pair .frame{aspect-ratio:auto}
+.gal.pair .frame img{position:static;height:auto}
+@media (max-width:620px){
+  .gal.pair{grid-template-columns:1fr}
+}
