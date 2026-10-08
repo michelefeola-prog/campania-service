@@ -1,0 +1,41 @@
+CAMPANIA SERVICE — VERSIONE CORRETTA
+
+COME AGGIORNARE IL SITO SU GITHUB
+1. Estrai lo ZIP sul computer.
+2. Apri il repository michelefeola-prog/campania-service su GitHub.
+3. Seleziona Add file > Upload files.
+4. Carica nella radice del repository i 6 file HTML, style.css e script.js.
+   Sostituisci quelli esistenti mantenendo esattamente i nomi.
+   Le immagini sono le stesse: non occorre ricaricarle se già presenti.
+5. Conferma con Commit changes sul branch main.
+6. Attendi il completamento di GitHub Pages, poi aggiorna il sito.
+   Se vedi la vecchia versione, premi Ctrl+F5.
+
+Non caricare lo ZIP come singolo file e non creare una sottocartella:
+index.html deve restare nella radice, accanto a style.css e script.js.
+
+MODIFICHE
+- Menu su più righe: Chi siamo è visibile su tutte le pagine.
+- Marche ordinate, senza testo che scorre fuori dalla pagina.
+- Sezione Perché scegliere noi chiara, con riquadri e icone piccole.
+- Più spazio tra testi, pulsanti, fotografie e sezioni.
+- Foto Chi siamo senza sovrapposizioni.
+- 11 macchine con descrizione + 1 scheda di aiuto alla scelta:
+  griglia di 12 riquadri, 3 colonne su desktop e 1 su mobile.
+- 6 schede descrittive per i filati.
+- Descrizioni delle foto del negozio e dell'usato.
+- Indicazioni pratiche nella pagina Riparazioni.
+- Foto complete nelle schede, ingrandibili al clic.
+- Contenuti visibili anche senza animazioni e JavaScript.
+- Nuova versione del CSS per ridurre i problemi di cache.
+
+VERIFICHE
+Verificati tutti i collegamenti locali, le ancore, i file immagine,
+la presenza di Chi siamo su ogni pagina, le 12 schede macchine,
+le 6 schede filati e la sintassi JavaScript.
+L'anteprima nel browser remoto non può raggiungere il server locale:
+la verifica visiva della versione aggiornata resta da completare dopo il caricamento.
+
+Le descrizioni sono basate sulle foto e sulle informazioni già pubblicate.
+Non sono state aggiunte specifiche tecniche, prezzi o disponibilità non verificati.
+Il sito online non è stato modificato: manca l'accesso autenticato a GitHub.
