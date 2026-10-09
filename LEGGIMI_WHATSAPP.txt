@@ -1,0 +1,9 @@
+PULSANTE WHATSAPP — CAMPANIA SERVICE
+
+Estrai lo ZIP. In GitHub carica i 6 file HTML e style.css nella radice del repository campania-service, sostituendo i file esistenti. Conferma con Commit changes. Non occorre ricaricare le immagini o script.js.
+
+Il pulsante verde appare in basso a destra su tutte le pagine e apre WhatsApp al numero +39 334 867 6958. Il clic non invia automaticamente messaggi.
+
+Il resto del sito è stato mantenuto identico alla versione del repository 056cc90. Cambia soltanto il pulsante, il suo stile e il parametro di cache per caricare il CSS aggiornato.
+
+Verificate presenza su tutte le pagine, numero corretto e conservazione dei contenuti originali. La verifica visiva nel browser resta da completare dopo il caricamento. Il sito online non è stato modificato perché questa sessione non dispone di accesso autenticato a GitHub.

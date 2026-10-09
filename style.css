@@ -328,3 +328,17 @@ nav a{padding:.45rem 0}
  .hero .frame{outline-offset:5px}
  .page-title{padding:2.5rem 0 2rem}
 }
+
+/* Pulsante WhatsApp fisso, accessibile su desktop e smartphone. */
+.whatsapp-float{
+ position:fixed;right:max(24px,env(safe-area-inset-right));bottom:max(24px,env(safe-area-inset-bottom));
+ z-index:50;display:flex;align-items:center;justify-content:center;width:56px;height:56px;
+ border-radius:50%;background:#20CE66;color:#fff;text-decoration:none;
+ box-shadow:0 4px 16px rgba(0,0,0,.16);transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease;
+}
+.whatsapp-float svg{display:block;width:26px;height:26px;flex:none}
+.whatsapp-float:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+@media(hover:hover){.whatsapp-float:hover{background:#18B85A;transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.2)}}
+.whatsapp-float:active{transform:scale(.96)}
+@media(max-width:620px){.whatsapp-float{right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){.whatsapp-float{transition:none}.whatsapp-float:hover,.whatsapp-float:active{transform:none}}
