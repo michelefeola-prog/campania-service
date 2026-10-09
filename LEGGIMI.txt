@@ -1,31 +1,22 @@
-CAMPANIA SERVICE — VERSIONE AGGIORNATA
+MENU MOBILE — campania-service
 
-COME VEDERE IL SITO
-1. Estrai l’intero ZIP in una cartella.
-2. Apri index.html nel browser e naviga nelle sei pagine.
-Le immagini sono incluse. Serve una connessione per i font Google e la mappa.
+Carica soltanto script.js nella cartella principale del repository
+michelefeola-prog/campania-service, sostituendo il file script.js esistente.
+Non cambiare il nome del file. Non servono modifiche agli HTML o ai CSS.
+Non caricare questo LEGGIMI.txt.
 
-COME AGGIORNARE GITHUB PAGES
-Nel repository michelefeola-prog/campania-service sostituisci i sei file HTML
-con quelli presenti qui e aggiungi modern.css e modern.js nella cartella
-principale, accanto a style.css e script.js. Mantieni la cartella images.
-Non serve installare dipendenze né eseguire una build.
-GitHub Pages renderà disponibili le modifiche dopo il normale deploy.
+La modifica vale per tutte le sei pagine e solo fino a 700 px di larghezza.
+- Menu chiuso con pulsante a tre linee.
+- Menu a tendina con Home, Macchine, Filati, Usato garantito, Riparazioni,
+  Il negozio e Chiama.
+- Chi siamo resta nella Home e nel menu desktop.
+- Logo, nome, dimensioni, colori e contenuti restano quelli del sito.
+- Chiusura premendo di nuovo il pulsante, fuori dal menu, su una voce
+  oppure con Escape.
 
-COSA È CAMBIATO
-- Home: nuova apertura, richiamo grafico al filo, schede servizi e percorsi.
-- Macchine: selettore interattivo delle esigenze e messaggio WhatsApp dedicato.
-- Filati: percorso per progetto e tre palette di ispirazione interattive.
-- Usato garantito: evidenza alla garanzia di 12 mesi e guida alla scelta.
-- Riparazioni: tre passaggi e indicazioni per spiegare il difetto.
-- Il negozio: suggerimenti per preparare la visita.
-- Tutte le pagine: domande frequenti, nuova sezione contatti, comparsa durante
-  lo scorrimento, microinterazioni, barra di avanzamento e impaginazione mobile.
+Dopo il deploy attendi l’aggiornamento di GitHub Pages e ricarica la pagina.
+Se vedi ancora il vecchio menu, chiudi e riapri la scheda o verifica in una
+scheda privata: il browser potrebbe usare una copia precedente del file.
 
-VERIFICA
-Controllati struttura HTML, riferimenti locali, sintassi CSS e JavaScript,
-interazioni del selettore e delle palette, collegamenti contatto e modalità
-prefers-reduced-motion in un ambiente DOM simulato.
-L’anteprima visiva nel browser non è stata verificata: il browser remoto
-non raggiungeva il server locale. Verifica sul tuo PC prima di pubblicare.
-Le foto mostrano il negozio esistente; disponibilità e prezzi non sono inventati.
+Verificati struttura e comportamento in ambiente DOM simulato.
+Il risultato visivo finale va verificato sul tuo telefono.
